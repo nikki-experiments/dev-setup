@@ -27,7 +27,7 @@ Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/brow
 ## iTerm2
 
 Download and install [iTerm2](http://www.iterm2.com/) for a better terminal experience.
-I like to change terminal preferences to add color and to see what branch I'm on. Take the code from this [gist](https://gist.github.com/nikkipurcell/2f8c0cc81c008a1a3ef7a35d82de0f4f.js) and add it to your ~/.bash_profile file.
+I like to change terminal preferences to add color and to see what branch I'm on. Take the code from this [gist](https://gist.github.com/nikkipurcell/2f8c0cc81c008a1a3ef7a35d82de0f4f) and add it to your ~/.bash_profile file.
 
 ## Atom
 
