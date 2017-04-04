@@ -1,5 +1,5 @@
 # My Dev Setup
-This is my attempt at documenting my personal development setup on both my local Mac OS X and remote Linux VPS. My aim is to use the local computer for developing JavaScript applications and other coding experiments. The remote Linux server is where I manage my Wordpress blogs. I hope to update this site when I upgrade or add programs or packages to my dev setups. I'll also list technologies that I'm interested in learning or using soon.
+This is my attempt at documenting my personal development setup on both my local Mac OS X and remote Linux VPS. My aim is to use the local computer for developing JavaScript applications and other coding experiments. The remote Linux server is where I manage my Wordpress blogs. I hope to update this project file when I upgrade or add programs or packages to my dev setups. I'll also list technologies that I'm interested in learning or using soon.
 
 I've borrowed from other github repositories for some of this information.
 
@@ -27,6 +27,7 @@ Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/brow
 ## iTerm2
 
 Download and install [iTerm2](http://www.iterm2.com/) for a better terminal experience.
+I like to change terminal preferences to add color and to see what branch I'm on. Take the code from this [gist](https://gist.github.com/nikkipurcell/2f8c0cc81c008a1a3ef7a35d82de0f4f.js) and add it to your ~/.bash_profile file.
 
 ## Atom
 
