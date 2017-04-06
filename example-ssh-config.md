@@ -2,7 +2,7 @@
 
 Add your configs changes to `~/.ssh/config`.
 
-What I'm using right now:
+## What I'm using right now:
 
 [alias]
 - st = status
@@ -19,7 +19,7 @@ What I'm using right now:
 [push]
 - default = simple
   
-What I'd like to test out:
+## What I'd like to test out:
 
 [alias]
   Show verbose output about tags, branches or remotes
