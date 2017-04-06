@@ -10,8 +10,8 @@ Add your configs changes to `~/.ssh/config`.
 - co = checkout
 
 [user]
-- name = Nikki Purcell
-- email = nichole.purcell@demandmedia.com
+- name = Firstname Lastname
+- email = firstname.lastname@example.com
 
 [color]
 - ui = true
