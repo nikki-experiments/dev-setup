@@ -1,9 +1,10 @@
 # SEO 
 
 Listed are the Search Engine Optimization tools to help improve speed, performance and search rankings.
-[Tips](#tips)
-[Testing](#testing)
-[Analytics](#analytics)
+
+- [Tips](#tips)
+- [Testing](#testing)
+- [Analytics](#analytics)
 
 ## Tips
 
