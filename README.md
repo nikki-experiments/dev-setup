@@ -153,7 +153,7 @@ These are some of the programs that I usually install on my computer.
 - Numbers - Apple equiv of Excel
 - Pages - Apple equiv of Word
 - Github - host public and private Git repositories, keep track of revisions and collaborations.
-- Wordpress - Content Management System (CMS) of choice. Unfortunately not very secure. Alternative CMS: Jekyll. Review my SEO tools file. (TODO: add example file)
+- Wordpress - Content Management System (CMS) of choice. Unfortunately not very secure. Alternative CMS: Jekyll. Review my [SEO tools file](https://github.com/nikki-experiments/dev-setup/blob/master/seo.md).
 
 ## Tools to try Out
 
