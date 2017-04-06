@@ -13,6 +13,7 @@ I've borrowed from other github repositories for some of this information.
 - [SSH](#ssh)
 - [List of Programs](#list-of-programs)
 - [Tools to Try Out](#tools-to-try-out)
+- [Project Folders](#project-folders)
 
 ## Operating System
 
@@ -152,7 +153,7 @@ These are some of the programs that I usually install on my computer.
 - Numbers - Apple equiv of Excel
 - Pages - Apple equiv of Word
 - Github - host public and private Git repositories, keep track of revisions and collaborations.
-- Wordpress - Content Management System (CMS) of choice. Unfortunately not very secure. (Alternative: Jekyll)
+- Wordpress - Content Management System (CMS) of choice. Unfortunately not very secure. Alternative CMS: Jekyll. Review my SEO tools file. (TODO: add example file)
 
 ## Tools to try Out
 
@@ -173,3 +174,8 @@ These are the other tools that I might or might not have used but would like to 
 - Docker - container management
 - composeEnhancers
 - mySQL Workbench - mySQL database management
+
+## Project Folders
+
+I usually put my version controlled projects in `~/Projects`.
+I usually put my non-version controlled projects in `~/Dropbox`.
