@@ -10,6 +10,7 @@ I've borrowed from other github repositories for some of this information.
 - [Homebrew](#homebrew)
 - [Git](#git)
 - [Tech Stacks](#tech-stacks)
+- [SSH](#ssh)
 
 ## Operating System
 
@@ -89,11 +90,46 @@ Add basic git configurations that will be added to your `.gitconfig` file. You c
     $ git config --global user.email "your_email@youremail.com"
 
 Also create a `.gitignore` file. Look at the example file. (TODO: add example file)
+Here is a fun website that teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
 
 ## Tech Stacks
 
 I have a few different tech stacks that I use.
-- Wordpress projects hosted on my VPS: LAMP (Linux, Apache, MariaDB, PHP)
-- Local PHP development: MAMP (Apache, MySQL, PHP)
-- JavaScript applications: MERN (MondoDB, Express, React, Node)
+- Wordpress projects hosted on my VPS: **LAMP** (Linux, Apache, MariaDB, PHP)
+- Local PHP development: **MAMP** (Apache, MySQL, PHP)
+- JavaScript applications: **MERN** (MondoDB, Express, React, Node)
 
+Variations to the stack choices above can include:
+- NGINX for Apache
+- Databases: mySQL, MariaDB, MongoDB, PostgreSQL
+- Python for PHP
+
+### ReactJS
+
+So far my favorite Javascript Framework is [React](https://facebook.github.io/react/). I won't list them all but some of the modules I use with React projects include **react-router, babel, gulp, lodash, less, webpack, eslint, redux, reselect,** and **redux-devtools**.
+
+### NodeJS
+
+So 
+
+### CSS Preprocessor
+
+I started using **[LESS](http://lesscss.org/)** so it's what I'm most familiar with but **[SASS](http://sass-lang.com/)** is also very popular. I'd like to learn that soon.
+
+## SSH
+
+I use **Secure Shell (SSH)** to connect to remote hosts via the command line. To make it easier to login, create a config file at `~/.ssh/config`.
+
+    Host example,
+        Hostname example.com
+        User user.name
+ 
+ This creates an alias for `user.name@example.com`. To run the alias type `ssh example` in terminal.
+ 
+ ### Generate SSH key
+ 
+Generate an SSH key so you can distribute.
+ 
+    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   
+Accept the default location to save the key. You will be prompted to type a secure passphrase. Good idea for safety.
