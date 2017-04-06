@@ -11,6 +11,8 @@ I've borrowed from other github repositories for some of this information.
 - [Git](#git)
 - [Tech Stacks](#tech-stacks)
 - [SSH](#ssh)
+- [List of Programs](#list-of-programs)
+- [Tools to Try Out](#tools-to-try-out)
 
 ## Operating System
 
@@ -114,7 +116,7 @@ So
 
 ### CSS Preprocessor
 
-I started using **[LESS](http://lesscss.org/)** so it's what I'm most familiar with but **[SASS](http://sass-lang.com/)** is also very popular. I'd like to learn that soon.
+I started using [LESS](http://lesscss.org/) so it's what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular. I'd like to learn that soon.
 
 ## SSH
 
@@ -133,3 +135,41 @@ Generate an SSH key so you can distribute.
     $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    
 Accept the default location to save the key. You will be prompted to type a secure passphrase. Good idea for safety.
+
+## List of Programs
+
+These are some of the programs that I usually install on my computer.
+
+- Dropbox - free for 2GB good for backup.
+- Google Drive - similar, good for docs (free for 5GB)
+- Lastpass - stores all passwords
+- Evernote - best note taking app with the biggest muscles
+- Google Keep - nice simple note taking that can be accessed offline.
+- Photoshop - for design
+- Gimp - free photoshop alternative
+- Sequel Pro - free GUI for mySQL databases
+- Slack - communication app 
+- Numbers - Apple equiv of Excel
+- Pages - Apple equiv of Word
+- Github - host public and private Git repositories, keep track of revisions and collaborations.
+- Wordpress - Content Management System (CMS) of choice. Unfortunately not very secure. (Alternative: Jekyll)
+
+## Tools to try Out
+
+These are the other tools that I might or might not have used but would like to explore more:
+- Yarn - alternate package manager
+- [Spectacle](https://www.spectacleapp.com/) - move and resize windows free 
+- Primitive - A CSS framework that provides a base stylesheet
+- Gulp - Task runner that provides compiling, minifying, autoprefixing, linting, and more. Use globally (npm used for local projects)
+  Another option is Grunt.
+- Elasticsearch - open source, real-time search and analytics engine (runs on Java)
+- Redis - key-value store similar to NoSQL database. Can be used for session management or caching by web apps
+- Python - review article (http://blog.teamtreehouse.com/what-is-python)
+- Heroku - Platform as a Service (PaaS) - deploy apps online
+- ComodoSSL - Encryption (TLS/SSL) this protocol increases the security of data transmitted thorugh the internet. You must pay but there is a free option called **Let's Encrypt!**
+- Cloudflare - Content Delivery Network (CDN) that is fast and free to implement. Just point your name servers to Cloudflare's for lower bandwidth usage. Sites should get speed and performance boost!
+- VirtualBox - virtual machine management
+- Vagrant
+- Docker - container management
+- composeEnhancers
+- mySQL Workbench - mySQL database management
