@@ -76,7 +76,15 @@ You should run the following command to make sure there are no issues you need t
 
 ### Usage
 
-It is high time I give credit to the excellent mac-dev-setup instructions of [nicholashery](https://github.com/nicolashery/mac-dev-setup). I will refer you to his page to read up on how to use Homebrew to install packages.
+It is high time I give credit to the excellent mac-dev-setup instructions of [nicholashery](https://github.com/nicolashery/mac-dev-setup). I will refer you to his page to read up on how to use Homebrew to install packages. For my own quick reference:
+- Check if brew is installed: `brew --version`
+- To see where it's installed: `which brew`
+- Keep homebrew updated: `brew update`
+- To see what was installed using homebrew: `brew list`
+- To uninstall software: `brew uninstall packagename`
+- To check which packages are out of date: `brew outdated`
+- To not update specific software package: `brew pin packagename` Then run the update. Can also upnpin package.
+- To upgrade specific packages: `brew upgrade packagename`
 
 ## Git
 
