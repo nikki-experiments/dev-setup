@@ -53,6 +53,9 @@ As far as text editors go, I was a hardcore Sublime Text user, until I discovere
 
 Other text editors: [Sublime Text](https://www.sublimetext.com/), [Visual Studio Code](http://code.visualstudio.com/), [Brackets](http://brackets.io/) 
 
+Installed Packages: language-babel, atom-beautify, autohide-tree-view, color-picker, emmet, minimap, pigments, javascript-snippets
+Fav Themes: UI Theme (One Dark), Syntax Theme (Oceanic Next or Green)
+
 ## Homebrew
 
 I use Homebrew as a package manager for when I need to install programs on my Mac operating system. The process may change when I update my OS but as of (OS X Yosemite 10.10) you need to install **Command Line Tools** for **Xcode**. 
@@ -121,7 +124,13 @@ So far my favorite Javascript Framework is [React](https://facebook.github.io/re
 
 ### NodeJS
 
-So 
+With Homebrew installed just run the following:
+
+    $ brew install node
+    
+Then check to see if node is installed by running: `node -v`. Check if npm is installed by running: `npm -v`
+Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
+Note 2: If you need to use different node versions on your machine install nvm (node version manager) 
 
 ### CSS Preprocessor
 
