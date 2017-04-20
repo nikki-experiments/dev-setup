@@ -9,11 +9,13 @@ I've borrowed from other github repositories for some of this information.
 - [Atom](#atom)
 - [Homebrew](#homebrew)
 - [Git](#git)
+- [LESS](#less)
+- [Project Folders](#project-folders)
 - [Tech Stacks](#tech-stacks)
 - [SSH](#ssh)
 - [List of Programs](#list-of-programs)
 - [Tools to Try Out](#tools-to-try-out)
-- [Project Folders](#project-folders)
+
 
 ## Operating System
 
@@ -106,23 +108,32 @@ Add basic git configurations that will be added to your `.gitconfig` file. You c
 Also create a `.gitignore` file. Look at the example file. (TODO: add example file)
 Here is a fun website that teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
 
+## LESS
+
+[LESS](http://lesscss.org/) is a CSS preprocessor that makes it easier to organize and reuse CSS code. I use it because it is what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular. I'd like to try that soon.
+
+## Project Folders
+
+I usually put my version controlled projects in `~/Projects`.
+I usually put my non-version controlled projects in `~/Dropbox`.
+
 ## Tech Stacks
 
 I have a few different tech stacks that I use.
+- JavaScript applications: **MERN** (MondoDB, Express, React, Node)
 - Wordpress projects hosted on my VPS: **LAMP** (Linux, Apache, MariaDB, PHP)
 - Local PHP development: **MAMP** (Apache, MySQL, PHP)
-- JavaScript applications: **MERN** (MondoDB, Express, React, Node)
 
 Variations to the stack choices above can include:
 - NGINX for Apache
 - Databases: mySQL, MariaDB, MongoDB, PostgreSQL
 - Python for PHP
 
-### ReactJS
+### React.js
 
 So far my favorite Javascript Framework is [React](https://facebook.github.io/react/). I won't list them all but some of the modules I use with React projects include **react-router, babel, gulp, lodash, less, webpack, eslint, redux, reselect,** and **redux-devtools**.
 
-### NodeJS
+### Node.js
 
 With Homebrew installed just run the following:
 
@@ -131,10 +142,6 @@ With Homebrew installed just run the following:
 Then check to see if node is installed by running: `node -v`. Check if npm is installed by running: `npm -v`
 Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
 Note 2: If you need to use different node versions on your machine install nvm (node version manager) 
-
-### CSS Preprocessor
-
-I started using [LESS](http://lesscss.org/) so it's what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular. I'd like to learn that soon.
 
 ## SSH
 
@@ -191,8 +198,3 @@ These are the other tools that I might or might not have used but would like to 
 - Docker - container management
 - composeEnhancers
 - mySQL Workbench - mySQL database management
-
-## Project Folders
-
-I usually put my version controlled projects in `~/Projects`.
-I usually put my non-version controlled projects in `~/Dropbox`.
