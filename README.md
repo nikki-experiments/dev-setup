@@ -179,10 +179,38 @@ These are some of the programs that I usually install on my computer.
 - Github - host public and private Git repositories, keep track of revisions and collaborations.
 - Wordpress - Content Management System (CMS) of choice. Unfortunately not very secure. Alternative CMS: Jekyll. Review my [SEO tools file](https://github.com/nikki-experiments/dev-setup/blob/master/seo.md).
 
-## Tools to try Out
+## List of Tools
 
-These are the other tools that I might or might not have used but would like to explore more:
-- Yarn - alternate package manager
+These are either some of the tools that I use and others that I'd like to explore:
+
+### Yarn
+
+[Yarn](https://yarnpkg.com/en/) is a great package manager that installs packages for your projects. It's 100% deterministic, installs packages faster and has better caching than npm. Yarn locks down your dependencies by default (as opposed to npm shrinkwrap command which is more difficult to maintain). General rule is use Yarn for individual project installs and npm for library project installs or global installs where you may not want to lock down the dependencies.
+
+To install it run `brew install yarn`.
+
+Go to your project directory and run `yarn` (similar to npm install command). You'll see a list of dependencies being installed. A yarn.lock file will be created that automatically gets updated when you run yarn commands.
+
+To add packages run `yarn add packagename`.
+
+Cool fact: you can run `yarn upgrade-interactive` to see all the packages for your project for which upgrades are available.
+
+### Standard
+
+This takes the esLint tool to another level. [Standard](https://standardjs.com/) is everything you loved about esLint but with a standard set of rules. 
+
+Install: `npm install --global standard`.
+To Use: While in your project directory run `standard` in terminal.
+To Fix: Run `standard --fix` to fix some of the linting errors. 
+
+### NPM Scripts
+
+In your package.json file you can add short list of commands to run tools. For example if you want to run linter, you can use the standard command.
+
+    "scripts": {
+        "lint": "standard"
+     },
+
 - [Spectacle](https://www.spectacleapp.com/) - move and resize windows free 
 - Primitive - A CSS framework that provides a base stylesheet
 - Gulp - Task runner that provides compiling, minifying, autoprefixing, linting, and more. Use globally (npm used for local projects)
