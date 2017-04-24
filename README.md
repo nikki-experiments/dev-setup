@@ -143,6 +143,27 @@ Then check to see if node is installed by running: `node -v`. Check if npm is in
 Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
 Note 2: If you need to use different node versions on your machine install nvm (node version manager) 
 
+### Webpack
+
+Webpack takes all components that you’ve created puts it together in one bundled JavaScript file and makes it available to send down.
+That way you can break huge projects down to smaller more manageable modules. 
+To install: 
+
+    $ npm install --global webpack
+    
+Now you can run a command to convert your React files into your final js file. Make sure you are in your project's root directory. 
+For a Dev build, run:
+  
+    $ webpack js/Clientapp.js public/bundle.js
+    
+In this example the first file webpack is going to see is js/Clientapp.js. The output file will be public/bundle.js.
+The bundle.js file will be pretty large. That is why you should run a separate build for production. This one should be minified, gzipped.
+For a Produciton build, run: 
+
+    $ NODE_ENV=production webpack -p js/Clientapp.js public/bundle.js 
+ 
+Now all you need to do is add the file path to your bundle file in your main html file.
+
 ## SSH
 
 I use **Secure Shell (SSH)** to connect to remote hosts via the command line. To make it easier to login, create a config file at `~/.ssh/config`.
@@ -189,7 +210,7 @@ These are either some of the tools that I use and others that I'd like to explor
 
 To install it run `brew install yarn`.
 
-Go to your project directory and run `yarn` (similar to npm install command). You'll see a list of dependencies being installed. A yarn.lock file will be created that automatically gets updated when you run yarn commands.
+To install a project's dependencies go to the project directory and run `yarn` (similar to npm install command). You'll see a list of dependencies being installed. A yarn.lock file will be created that automatically gets updated when you run yarn commands. If it's a new project with no dependencies yet run `yarn init` and answer the series of questions.
 
 To add packages run `yarn add packagename`.
 
