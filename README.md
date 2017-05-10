@@ -8,11 +8,11 @@ I've borrowed from other github repositories for some of this information.
 - [iTerm2](#iterm2)
 - [Atom](#atom)
 - [Homebrew](#homebrew)
+- [SSH](#ssh)
 - [Git](#git)
 - [LESS](#less)
 - [Project Folders](#project-folders)
 - [Tech Stacks](#tech-stacks)
-- [SSH](#ssh)
 - [List of Programs](#list-of-programs)
 - [Tools to Try Out](#tools-to-try-out)
 
@@ -91,6 +91,24 @@ It is high time I give credit to the excellent mac-dev-setup instructions of [ni
 - To not update specific software package: `brew pin packagename` Then run the update. Can also upnpin package.
 - To upgrade specific packages: `brew upgrade packagename`
 
+## SSH
+
+I use **Secure Shell (SSH)** to connect to remote hosts via the command line. To make it easier to login, create a config file at `~/.ssh/config`.
+
+    Host example,
+        Hostname example.com
+        User user.name
+ 
+ This creates an alias for `user.name@example.com`. To run the alias type `ssh example` in terminal.
+ 
+ ### Generate SSH key
+ 
+Generate an SSH key so you can distribute.
+ 
+    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   
+Accept the default location to save the key. You will be prompted to type a secure passphrase. Good idea for safety.
+
 ## Git
 
 Do your projects a favor by adding version control. [Git](https://git-scm.com/downloads) project repositories can be hosted in Github. Check to see if Git is already installed by running `$ git --version`. 
@@ -131,9 +149,11 @@ Variations to the stack choices above can include:
 
 ### React.js
 
-So far my favorite Javascript Framework is [React](https://facebook.github.io/react/). I won't list them all but some of the modules I use with React projects include **react-router, babel, gulp, lodash, less, webpack, eslint, redux, reselect,** and **redux-devtools**.
+So far my favorite Javascript library is [React](https://facebook.github.io/react/). I won't list them all but some of the modules I use with React projects include **react-router, babel, gulp, lodash, less, webpack, eslint, redux, reselect,** and **redux-devtools**.
 
-### Node.js
+Here are the steps I take to setup a React project:
+
+#### Node.js
 
 With Homebrew installed just run the following:
 
@@ -143,7 +163,52 @@ Then check to see if node is installed by running: `node -v`. Check if npm is in
 Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
 Note 2: If you need to use different node versions on your machine install nvm (node version manager) 
 
-### Webpack
+#### NPM Modules
+If your starting a new project:
+- Create your first React index.html file. 
+- In the root directory for that project run `npm init` to create a new node_modules directory and package.json file.
+
+If your working on an existing project:
+- do a git clone to pull down the repo files to your local directory.
+- run `npm install` so you can add all the necessary module dependencies and update the package.json file with these dependencies.
+
+You may (should) include these npm modules in your React project. Since you'll use them for all React development you can install them globally. (Standard is optional and mocha might be replaced with another testing tool soon).
+- npm install -g mocha
+- npm install -g nodemon
+- npm install -g webpack
+- npm install -g standard
+
+Here are your two must have React project modules. Install them in each project directory.
+- npm install react react-dom
+
+#### NPM Scripts
+Open your package.json file and add bash commands to make your longer commands shorter and easier to remember.
+
+    "scripts": {
+        "build": "webpack"
+        "start": "node server.js"
+        "lint": "eslint --ignore-path .gitignore --cache ./"
+     }
+
+To run this on command line for example you could run: `$ npm run build`.
+For special words like "test" and "start" running `npm test` or `npm t` will also work.
+
+#### Babel
+
+Babel takes es6 and compiles it to es5, the version currently supported on the majority of browsers.
+1. Create a file named .babelrc.
+2. Npm install the following babel dependencies (babel-core, babel-loader, babel-preset-es2015, babel-preset-react, babel-register).
+3. Now create a json object inside that contains this to start:
+
+    {
+      "presets": ["react", "es2015"]
+    }
+    
+4. Change your npm scripts for build to: "webpack --module-bind 'js=babel' js/ClientApp.js public/bundle.js"
+5. Of course modify based on your project name and file structure.
+
+
+#### Webpack
 
 Webpack takes all components that you’ve created puts it together in one bundled JavaScript file and makes it available to send down.
 That way you can break huge projects down to smaller more manageable modules. 
@@ -164,23 +229,7 @@ For a Produciton build, run:
  
 Now all you need to do is add the file path to your bundle file in your main html file.
 
-## SSH
-
-I use **Secure Shell (SSH)** to connect to remote hosts via the command line. To make it easier to login, create a config file at `~/.ssh/config`.
-
-    Host example,
-        Hostname example.com
-        User user.name
- 
- This creates an alias for `user.name@example.com`. To run the alias type `ssh example` in terminal.
- 
- ### Generate SSH key
- 
-Generate an SSH key so you can distribute.
- 
-    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-   
-Accept the default location to save the key. You will be prompted to type a secure passphrase. Good idea for safety.
+If you've configured Babel already, then you'll want to break up your webpack command (getting pretty long) into a config file.
 
 ## List of Programs
 
