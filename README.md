@@ -84,7 +84,7 @@ You should run the following command to make sure there are no issues you need t
 It is high time I give credit to the excellent mac-dev-setup instructions of [nicholashery](https://github.com/nicolashery/mac-dev-setup). I will refer you to his page to read up on how to use Homebrew to install packages. For my own quick reference:
 - Check if brew is installed: `brew --version`
 - To see where it's installed: `which brew`
-- Keep homebrew updated: `brew update`
+- Always keep homebrew updated: `brew update`
 - To see what was installed using homebrew: `brew list`
 - To uninstall software: `brew uninstall packagename`
 - To check which packages are out of date: `brew outdated`
@@ -128,7 +128,7 @@ Here is a fun website that teaches the [basics of how to use git](http://rogerdu
 
 ## LESS
 
-[LESS](http://lesscss.org/) is a CSS preprocessor that makes it easier to organize and reuse CSS code. I use it because it is what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular. I'd like to try that soon.
+[LESS](http://lesscss.org/) is a CSS preprocessor that makes it easier to organize and reuse CSS code. I use it because it is what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular among Ruby developers. I think I'll be moving into CSS Modules for React soon which will make LESS and SASS obsolete.
 
 ## Project Folders
 
@@ -155,6 +155,7 @@ Here are the steps I take to setup a React project:
 
 #### Node.js
 
+Make sure Node.js is installed.
 With Homebrew installed just run the following:
 
     $ brew install node
@@ -163,7 +164,9 @@ Then check to see if node is installed by running: `node -v`. Check if npm is in
 Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
 Note 2: If you need to use different node versions on your machine install nvm (node version manager) 
 
-#### NPM Modules
+#### Install Node Modules
+
+THE NPM WAY:
 If your starting a new project:
 - Create your first React index.html file. 
 - In the root directory for that project run `npm init` to create a new node_modules directory and package.json file.
@@ -181,8 +184,15 @@ You may (should) include these npm modules in your React project. Since you'll u
 Here are your two must have React project modules. Install them in each project directory.
 - npm install react react-dom
 
+THE YARN WAY:
+**NOTE:** I typically use **Yarn** instead of npm to install all React project dependencies. (See the section on Yarn below).
+To initialize a new project use `yarn init` and fill out the prompts which will create a new package.json file. 
+You can also run `yarn add <package name>` to save your dependencies to package.json. 
+Add `--dev` to this command to save to devDependencies.
+
 #### NPM Scripts
 Open your package.json file and add bash commands to make your longer commands shorter and easier to remember.
+The word on the left can be anything you want but these are standard ones. The command on the right is what will actually run.
 
     "scripts": {
         "build": "webpack"
@@ -190,23 +200,31 @@ Open your package.json file and add bash commands to make your longer commands s
         "lint": "eslint --ignore-path .gitignore --cache ./"
      }
 
-To run this on command line for example you could run: `$ npm run build`.
+To run this on command line for example you could run: `$ npm run build` which will run webpack.
 For special words like "test" and "start" running `npm test` or `npm t` will also work.
 
 #### Babel
 
-Babel takes es6 and compiles it to es5, the version currently supported on the majority of browsers.
-1. Create a file named .babelrc.
-2. Npm install the following babel dependencies (babel-core, babel-loader, babel-preset-es2015, babel-preset-react, babel-register).
-3. Now create a json object inside that contains this to start:
+Babel takes es6 (future JavaScript) and compiles it down to es5 (current JavaScript), the version currently supported on the majority of browsers.
 
-    {
-      "presets": ["react", "es2015"]
-    }
+Install by first addding the dependencies:
+*The last two packages will allow you use start using es6 and JSX*.
+
+    $ yarn add babel-loader babel-core babel-preset-es2015 babel-preset-react
     
-4. Change your npm scripts for build to: "webpack --module-bind 'js=babel' js/ClientApp.js public/bundle.js"
-5. Of course modify based on your project name and file structure.
+Now create a new file named `.babelrc`.
+Inside write the following JSON.
+    
+    {
+        'presets': [
+            'es2015', 'react'
+        ]
+    }
 
+If you were still using npm scripts to run webpack you would change the command to the following:
+`"build": "webpack --module-bind 'js=babel' js/ClientApp.js public/bundle.js"`
+
+However this is getting long so you should change remove everything after webpack and set up a webpack config file described in the next section.
 
 #### Webpack
 
@@ -214,9 +232,9 @@ Webpack takes all components that you’ve created puts it together in one bundl
 That way you can break huge projects down to smaller more manageable modules. 
 To install: 
 
-    $ npm install --global webpack
+    $ yarn add webpack webpack-dev-server path (or run $ npm install --global webpack)
     
-Now you can run a command to convert your React files into your final js file. Make sure you are in your project's root directory. 
+Now you could run a command to convert your React files into your final js file. Make sure you are in your project's root directory. 
 For a Dev build, run:
   
     $ webpack js/Clientapp.js public/bundle.js
@@ -228,8 +246,32 @@ For a Produciton build, run:
     $ NODE_ENV=production webpack -p js/Clientapp.js public/bundle.js 
  
 Now all you need to do is add the file path to your bundle file in your main html file.
+You could add this command to your npm scripts. However it will get even longer once you add Babel.
+Instead of running longer commands like this, you can create a webpack config file to handle it for you.
 
-If you've configured Babel already, then you'll want to break up your webpack command (getting pretty long) into a config file.
+Create a new *webpack.config.js* file in the project root directory.
+Add the following:
+
+    const path = require('path')
+    module.exports = {
+        entry: 'app.js',
+        output: {
+            path: path.resolve('dist'),
+            filename: 'bundle.js'
+        },
+        module: {
+            loaders: [
+                {test: /\.js$/, loader: 'babel-loader', exclude: /node-modules/}
+            ]
+        }
+    }
+    
+Entry: is the file where the bundler starts the bundling process.
+Output: is the location where the bundled JS file will be saved.
+Loaders: are transformations applied on a file in our app. The key property takes on an array of loaders.
+
+Check the [Webpack documentation](https://webpack.github.io/docs/list-of-loaders.html) for more potential loaders you can use.
+With the webpack config file setup all you have to do is run `npm run webpack` when you want to push out a build.
 
 ## List of Programs
 
@@ -261,25 +303,18 @@ To install it run `brew install yarn`.
 
 To install a project's dependencies go to the project directory and run `yarn` (similar to npm install command). You'll see a list of dependencies being installed. A yarn.lock file will be created that automatically gets updated when you run yarn commands. If it's a new project with no dependencies yet run `yarn init` and answer the series of questions.
 
-To add packages run `yarn add packagename`.
+To add packages run `yarn add packagename`. 
+A yarn.lock file will be created which locks down the exact dependencies to use on another machine. Don't modify this file.
 
 Cool fact: you can run `yarn upgrade-interactive` to see all the packages for your project for which upgrades are available.
 
 ### Standard
 
-This takes the esLint tool to another level. [Standard](https://standardjs.com/) is everything you loved about esLint but with a standard set of rules. 
+This takes the esLint tool to another level. [Standard](https://standardjs.com/) is everything you loved about esLint but with a standard set of rules (including no semicolons!) 
 
 Install: `npm install --global standard`.
 To Use: While in your project directory run `standard` in terminal.
 To Fix: Run `standard --fix` to fix some of the linting errors. 
-
-### NPM Scripts
-
-In your package.json file you can add short list of commands to run tools. For example if you want to run linter, you can use the standard command.
-
-    "scripts": {
-        "lint": "standard"
-     },
 
 - [Spectacle](https://www.spectacleapp.com/) - move and resize windows free 
 - Primitive - A CSS framework that provides a base stylesheet
