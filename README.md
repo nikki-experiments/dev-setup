@@ -25,7 +25,7 @@ The operating system I use for my Virtual Private Server (VPS) is **Linux**.
 ### System updates
 
 Before installing anything, make sure the operating system is updated to the latest version.
-- For MAC: <span style="color:red">**Apple Icon > Software Update...**</span>
+- For MAC: **Apple Icon > Software Update...**
 - For Linux: Visit the official linux kernal website to determine what the current stable version of the kernal is. (More to come).
 
 ### System preferences
