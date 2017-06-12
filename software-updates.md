@@ -30,6 +30,7 @@ Use `nvm` to manage different versions of Node on your server.
 NPM updates more often than node so you definitely want to make sure this is updated more often.
 
 - `npm install npm@latest -g` to update to the latest version of npm.
+- `npm outdated` to see what packages are outdated that you installed with npm.
 
 ### Git
 This is one of the projects that was probably installed on the Mac by using Homebrew. So use Homebrew to update it.
