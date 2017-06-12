@@ -162,7 +162,7 @@ With Homebrew installed just run the following:
     
 Then check to see if node is installed by running: `node -v`. Check if npm is installed by running: `npm -v`
 Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
-Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager).
+Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager). Check to see it has been installed by running: `command -v nvm`.
 
 #### Install Node Modules
 
