@@ -30,3 +30,8 @@ Use `nvm` to manage different versions of Node on your server.
 NPM updates more often than node so you definitely want to make sure this is updated more often.
 
 - `npm install npm@latest -g` to update to the latest version of npm.
+
+### Git
+This is one of the projects that was probably installed on the Mac by using Homebrew. So use Homebrew to update it.
+If you want to see if your version of git is a security threat go to this [page](https://confluence.atlassian.com/bitbucketserver/installing-and-upgrading-git-776640906.html). 
+Also you can see if your version of git is out of date by first running `git --version` to check the version and then looking on the [Bitbucket Server supported platforms](https://confluence.atlassian.com/bitbucketserver/supported-platforms-776640981.html) page.
