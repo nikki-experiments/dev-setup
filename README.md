@@ -49,11 +49,11 @@ Options include: [Firefox](https://www.mozilla.org/en-US/firefox/products/), [Op
 Download and install [iTerm2](http://www.iterm2.com/) for a better terminal experience.
 I like to change terminal preferences to add color and to see what branch I'm on. Take the code from this [gist](https://gist.github.com/nikkipurcell/2f8c0cc81c008a1a3ef7a35d82de0f4f) and add it to your ~/.bash_profile file.
 
-## Atom
+## Visual Studio Code
 
-As far as text editors go, I was a hardcore Sublime Text user, until I discovered Atom. There are lots of reasons why I switched to Atom. For starters I love how easy it is to install packages and themes. Sublime was lightning fast and if Atom catches up I don't think I'll be going back to Sublime (but we had a great run)! [Atom](https://atom.io/) is currently my favorite text editor.
+As far as text editors go, I was a hardcore Sublime Text user, then an Atom user and now I'm using [Visual Studio Code(https://code.visualstudio.com/download)
 
-Other text editors: [Sublime Text](https://www.sublimetext.com/), [Visual Studio Code](http://code.visualstudio.com/), [Brackets](http://brackets.io/) 
+Other text editors: [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Visual Studio Code](http://code.visualstudio.com/), [Brackets](http://brackets.io/) 
 
 Installed Packages: language-babel, atom-beautify, autohide-tree-view, color-picker, emmet, minimap, pigments, javascript-snippets
 Fav Themes: UI Theme (One Dark), Syntax Theme (Oceanic Next or Green)
