@@ -51,9 +51,9 @@ I like to change terminal preferences to add color and to see what branch I'm on
 
 ## Visual Studio Code
 
-As far as text editors go, I was a hardcore Sublime Text user, then an Atom user and now I'm using [Visual Studio Code(https://code.visualstudio.com/download)
+As far as text editors go, I was a hardcore Sublime Text user, then an Atom user and now I'm using [Visual Studio Code](http://code.visualstudio.com/).
 
-Other text editors: [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Visual Studio Code](http://code.visualstudio.com/), [Brackets](http://brackets.io/) 
+Other text editors: [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/)
 
 Installed Packages: language-babel, atom-beautify, autohide-tree-view, color-picker, emmet, minimap, pigments, javascript-snippets
 Fav Themes: UI Theme (One Dark), Syntax Theme (Oceanic Next or Green)
@@ -163,6 +163,7 @@ With Homebrew installed just run the following:
 Then check to see if node is installed by running: `node -v`. Check if npm is installed by running: `npm -v`
 Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
 Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager). Check to see it has been installed by running: `command -v nvm`.
+Note 3: Make sure Node version is 8+.
 
 #### Install Node Modules
 
