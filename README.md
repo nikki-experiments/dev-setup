@@ -6,10 +6,10 @@ I've borrowed from other github repositories for some of this information.
 - [Operating System](#operating-system)
 - [Google Chrome](#google-chrome)
 - [iTerm2](#iterm2)
-- [Atom](#atom)
 - [Homebrew](#homebrew)
 - [SSH](#ssh)
 - [Git](#git)
+- [Visual Studio Code](#visual-studio-code)
 - [LESS](#less)
 - [Project Folders](#project-folders)
 - [Tech Stacks](#tech-stacks)
@@ -47,16 +47,7 @@ Options include: [Firefox](https://www.mozilla.org/en-US/firefox/products/), [Op
 ## iTerm2
 
 Download and install [iTerm2](http://www.iterm2.com/) for a better terminal experience.
-I like to change terminal preferences to add color and to see what branch I'm on. Take the code from this [gist](https://gist.github.com/nikkipurcell/2f8c0cc81c008a1a3ef7a35d82de0f4f) and add it to your ~/.bash_profile file.
-
-## Visual Studio Code
-
-As far as text editors go, I was a hardcore Sublime Text user, then an Atom user and now I'm using [Visual Studio Code](http://code.visualstudio.com/).
-
-Other text editors: [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/)
-
-Installed Packages: language-babel, atom-beautify, autohide-tree-view, color-picker, emmet, minimap, pigments, javascript-snippets
-Fav Themes: UI Theme (One Dark), Syntax Theme (Oceanic Next or Green)
+I like to change terminal preferences to add color to help see what branch I'm on. Take the code from this [gist](https://gist.github.com/nikkipurcell/2f8c0cc81c008a1a3ef7a35d82de0f4f) and add it to your ~/.bash_profile file.
 
 ## Homebrew
 
@@ -126,6 +117,14 @@ Add basic git configurations that will be added to your `.gitconfig` file. You c
 Also create a `.gitignore` file. Look at the example file. (TODO: add example file)
 Here is a fun website that teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
 
+## Visual Studio Code
+
+As far as text editors go, I was a hardcore [Sublime Text](https://www.sublimetext.com/) user, then I used [Atom](https://atom.io/) and now I'm loving [Visual Studio Code](http://code.visualstudio.com/).
+
+I love the embedded terminal, ease of installing packages, and debug features.
+
+Installed Packages: Babel ES6/ES7, ESLint, Flow Language Support, Prettier - Code formatter.
+
 ## LESS
 
 [LESS](http://lesscss.org/) is a CSS preprocessor that makes it easier to organize and reuse CSS code. I use it because it is what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular among Ruby developers. I think I'll be moving into CSS Modules for React soon which will make LESS and SASS obsolete.
@@ -133,11 +132,14 @@ Here is a fun website that teaches the [basics of how to use git](http://rogerdu
 ## Project Folders
 
 I usually put my version controlled projects in `~/Projects`.
-I usually put my non-version controlled projects in `~/Dropbox`.
+I usually put my non-version controlled experiments in [Codepen.io](https://codepen.io/).
 
 ## Tech Stacks
 
-I have a few different tech stacks that I use.
+My coding projects mainly have been React JavaScript projects that use the following tools: 
+  **Redux, Webpack, Babel, Prettier, Flow, React-Router, Gulp, Lodash Less, EsLint, Reselect, Redux-Devtools** and **Jest**.
+
+I have used a few different tech stacks.
 - JavaScript applications: **MERN** (MondoDB, Express, React, Node)
 - Wordpress projects hosted on my VPS: **LAMP** (Linux, Apache, MariaDB, PHP)
 - Local PHP development: **MAMP** (Apache, MySQL, PHP)
@@ -147,13 +149,12 @@ Variations to the stack choices above can include:
 - Databases: mySQL, MariaDB, MongoDB, PostgreSQL
 - Python for PHP
 
-### React.js
+### React JavaScript Projects
 
-So far my favorite Javascript library is [React](https://facebook.github.io/react/). I won't list them all but some of the modules I use with React projects include **react-router, babel, gulp, lodash, less, webpack, eslint, redux, reselect,** and **redux-devtools**.
-
+So far my favorite Javascript library is [React](https://facebook.github.io/react/). 
 Here are the steps I take to setup a React project:
 
-#### Node.js
+#### Install/Update Node.js
 
 Make sure Node.js is installed.
 With Homebrew installed just run the following:
@@ -165,31 +166,38 @@ Note 1: I didn't have issues but if you do, don't use homebrew and install manua
 Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager). Check to see it has been installed by running: `command -v nvm`.
 Note 3: Make sure Node version is 8+.
 
-#### Install Node Modules
+#### Create/Install Node Modules
 
-THE NPM WAY:
+You can do this two different ways. By using NPM 5 or Yarn. NPM 5 has made significant improvements to catch up to Yarn, but Yarn is still faster. Either way is fine.
+
+_THE NPM WAY_:
 If your starting a new project:
 - Create your first React index.html file. 
 - In the root directory for that project run `npm init` to create a new node_modules directory and package.json file.
 
 If your working on an existing project:
 - do a git clone to pull down the repo files to your local directory.
-- run `npm install` so you can add all the necessary module dependencies and update the package.json file with these dependencies.
+- run `npm install` which will add all the necessary module dependencies into the package.json file. A package-lock.json will also be created.
 
-You may (should) include these npm modules in your React project. Since you'll use them for all React development you can install them globally. (Standard is optional and mocha might be replaced with another testing tool soon).
-- npm install -g mocha
-- npm install -g nodemon
-- npm install -g webpack
-- npm install -g standard
+To save a new dependency in you project:
+Run `npm install <package name>`
 
-Here are your two must have React project modules. Install them in each project directory.
-- npm install react react-dom
+_THE YARN WAY_:
+**NOTE:** I typically use **Yarn** instead of npm to install my React project dependencies.
+If your starting a new project:
+Run `yarn init` and fill out the prompts which will create a new package.json file. 
 
-THE YARN WAY:
-**NOTE:** I typically use **Yarn** instead of npm to install all React project dependencies. (See the section on Yarn below).
-To initialize a new project use `yarn init` and fill out the prompts which will create a new package.json file. 
-You can also run `yarn add <package name>` to save your dependencies to package.json. 
+If your working on an existing project:
+Run `yarn` and that's it! This will create a package.lock and a yarn.lock file.
+
+To save a new dependency in you project:
+Run `yarn add <package name>`
 Add `--dev` to this command to save to devDependencies.
+
+#### Install React and React-Dom
+
+For any new React projects I'll typically install the following:
+- npm install react react-dom
 
 #### NPM Scripts
 Open your package.json file and add bash commands to make your longer commands shorter and easier to remember.
