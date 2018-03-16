@@ -10,7 +10,6 @@ I've borrowed from other github repositories for some of this information.
 - [SSH](#ssh)
 - [Git](#git)
 - [Visual Studio Code](#visual-studio-code)
-- [LESS](#less)
 - [Project Folders](#project-folders)
 - [Tech Stacks](#tech-stacks)
 - [List of Programs](#list-of-programs)
@@ -52,35 +51,7 @@ I like to change terminal preferences to add color to help see what branch I'm o
 ## Homebrew
 
 I use Homebrew as a package manager for when I need to install programs on my Mac operating system. The process may change when I update my OS but as of (OS X Yosemite 10.10) you need to install **Command Line Tools** for **Xcode**. 
-
-### Install
-I already had Xcode installed on my machine. I just needed to install the Command Line Tools. (Note: Newer OS X versions will no longer require you to download CLT or Xcode for this step).
-
-    $ xcode-select --install
-  
-To check the command line tools version run this:
-
-    $ xcode-select --version
-  
-Now install Homebrew:
-
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  
-You should run the following command to make sure there are no issues you need to correct with Homebrew:
-
-    $ brew doctor
-
-### Usage
-
-It is high time I give credit to the excellent mac-dev-setup instructions of [nicholashery](https://github.com/nicolashery/mac-dev-setup). I will refer you to his page to read up on how to use Homebrew to install packages. For my own quick reference:
-- Check if brew is installed: `brew --version`
-- To see where it's installed: `which brew`
-- Always keep homebrew updated: `brew update`
-- To see what was installed using homebrew: `brew list`
-- To uninstall software: `brew uninstall packagename`
-- To check which packages are out of date: `brew outdated`
-- To not update specific software package: `brew pin packagename` Then run the update. Can also upnpin package.
-- To upgrade specific packages: `brew upgrade packagename`
+Read more about it [here](https://github.com/nikki-experiments/dev-setup/blob/master/homebrew.md).
 
 ## SSH
 
@@ -125,10 +96,6 @@ I love the embedded terminal, ease of installing packages, and debug features.
 
 Installed Packages: Babel ES6/ES7, ESLint, Flow Language Support, Prettier - Code formatter.
 
-## LESS
-
-[LESS](http://lesscss.org/) is a CSS preprocessor that makes it easier to organize and reuse CSS code. I use it because it is what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular among Ruby developers. I think I'll be moving into CSS Modules for React soon which will make LESS and SASS obsolete.
-
 ## Project Folders
 
 I usually put my version controlled projects in `~/Projects`.
@@ -152,54 +119,67 @@ Variations to the stack choices above can include:
 ### React JavaScript Projects
 
 So far my favorite Javascript library is [React](https://facebook.github.io/react/). 
-Here are the steps I take to setup a React project:
+Here are the steps I take to setup a new React project:
 
 #### Install/Update Node.js
 
-Make sure Node.js is installed.
-With Homebrew installed just run the following:
+Node is a server framework that allows for asynchronous JavaScript programming on the server. Node files (.js files) must be initiated in the command line. You can include modules in your application. Most notably is NPM (a package manager for Node).
+
+Make sure Node.js is installed. With Homebrew just run the following:
 
     $ brew install node
     
-Then check to see if node is installed by running: `node -v`. Check if npm is installed by running: `npm -v`
-Note 1: I didn't have issues but if you do, don't use homebrew and install manually.
-Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager). Check to see it has been installed by running: `command -v nvm`.
-Note 3: Make sure Node version is 8+.
+Verify you have node installed: `node -v`
+Verify you have npm installed: `npm -v`
+
+Note 1: I didn't have issues but if you do, don't use homebrew and install node manually.
+Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager). Verify it's installed by running: `command -v nvm`.
+Note 3: Make sure Node is version is 8+.
+
+#### Install Yarn Globally
+
+When NPM 4 was the latest, Yarn was a must because it produced a yarn.lock file that NPM didn't. There was no need to use messy shrinkwrap files. Instead Yarn locked down your dependencies for easy management. Now that NPM 5 is in use, the only real benefit of Yarn is that it still builds dependencies faster than NPM. When NPM improves speed I'll switch back to it. Until then I'll continue using Yarn.
+
+    $ npm install --global yarn
+    
+Then check that you installed it properly.
+
+    $ yarn --version
 
 #### Create/Install Node Modules
 
-You can do this two different ways. By using NPM 5 or Yarn. NPM 5 has made significant improvements to catch up to Yarn, but Yarn is still faster. Either way is fine.
+New projects:
 
-_THE NPM WAY_:
-If your starting a new project:
 - Create your first React index.html file. 
-- In the root directory for that project run `npm init` to create a new node_modules directory and package.json file.
+- In the root directory for that project run the following to create a new node_modules directory and package.json file.
+    
+ `npm init` or `yarn init`
+    
+Existing projects:
 
-If your working on an existing project:
-- do a git clone to pull down the repo files to your local directory.
-- run `npm install` which will add all the necessary module dependencies into the package.json file. A package-lock.json will also be created.
+- Run `git clone path-to-project` to pull down the repo files to your local directory.
+- Run the following to add module dependencies listed in the package.json file. A package-lock.json  or yarn.lock will be created.
 
-To save a new dependency in you project:
-Run `npm install <package name>`
+ `npm install` or `yarn`
 
-_THE YARN WAY_:
-**NOTE:** I typically use **Yarn** instead of npm to install my React project dependencies.
-If your starting a new project:
-Run `yarn init` and fill out the prompts which will create a new package.json file. 
+Save a new dependency:
+ 
+ `npm install <package name>` or `yarn add <package name>`
 
-If your working on an existing project:
-Run `yarn` and that's it! This will create a package.lock and a yarn.lock file.
-
-To save a new dependency in you project:
-Run `yarn add <package name>`
 Add `--dev` to this command to save to devDependencies.
 
 #### Install React and React-Dom
 
 For any new React projects I'll typically install the following:
-- npm install react react-dom
+
+ `npm install react react-dom`
+ 
+#### Install Prettier and ESLint
+
+
 
 #### NPM Scripts
+
 Open your package.json file and add bash commands to make your longer commands shorter and easier to remember.
 The word on the left can be anything you want but these are standard ones. The command on the right is what will actually run.
 
@@ -282,9 +262,14 @@ Loaders: are transformations applied on a file in our app. The key property take
 Check the [Webpack documentation](https://webpack.github.io/docs/list-of-loaders.html) for more potential loaders you can use.
 With the webpack config file setup all you have to do is run `npm run webpack` when you want to push out a build.
 
+
+#### LESS
+
+[LESS](http://lesscss.org/) is a CSS preprocessor that makes it easier to organize and reuse CSS code. I use it because it is what I'm most familiar with but [SASS](http://sass-lang.com/) is also very popular among Ruby developers. I think I'll be moving into CSS Modules for React soon which will make LESS and SASS obsolete.
+
 ## List of Programs
 
-These are some of the programs that I usually install on my computer.
+These are some of the programs that I usually install on my new computers.
 
 - Dropbox - free for 2GB good for backup.
 - Google Drive - similar, good for docs (free for 5GB)
@@ -317,13 +302,7 @@ A yarn.lock file will be created which locks down the exact dependencies to use 
 
 Cool fact: you can run `yarn upgrade-interactive` to see all the packages for your project for which upgrades are available.
 
-### Standard
-
-This takes the esLint tool to another level. [Standard](https://standardjs.com/) is everything you loved about esLint but with a standard set of rules (including no semicolons!) 
-
-Install: `npm install --global standard`.
-To Use: While in your project directory run `standard` in terminal.
-To Fix: Run `standard --fix` to fix some of the linting errors. 
+### Other programs include:
 
 - [Spectacle](https://www.spectacleapp.com/) - move and resize windows free 
 - Primitive - A CSS framework that provides a base stylesheet
