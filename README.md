@@ -134,7 +134,7 @@ Verify you have npm installed: `npm -v`
 
 Note 1: I didn't have issues but if you do, don't use homebrew and install node manually.
 Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager). Verify it's installed by running: `command -v nvm`.
-Note 3: Make sure Node is version is 8+.
+Use this [web page](https://davidwalsh.name/nvm) to learn how to easily use nvm. 
 
 #### Install Yarn Globally
 
@@ -176,6 +176,13 @@ For any new React projects I'll typically install the following:
  
 #### Install Prettier and ESLint
 
+Prettier is a style formatter for your project files. To install:
+
+    $ npm install --global prettier
+    
+ESLint is a JavaScript linting tool. To install:
+
+    $ npm install --global eslint
 
 
 #### NPM Scripts
