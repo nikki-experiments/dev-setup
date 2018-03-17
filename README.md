@@ -136,6 +136,11 @@ Note 1: I didn't have issues but if you do, don't use homebrew and install node 
 Note 2: If you need to use different node versions on your machine install [nvm](https://github.com/creationix/nvm) (node version manager). Verify it's installed by running: `command -v nvm`.
 Use this [web page](https://davidwalsh.name/nvm) to learn how to easily use nvm. 
 
+#### Update NPM to latest version
+
+NPM comes installed with Node.js. 
+To update npm to the latest version run: `npm install -g npm@latest`
+
 #### Install Yarn Globally
 
 When NPM 4 was the latest, Yarn was a must because it produced a yarn.lock file that NPM didn't. There was no need to use messy shrinkwrap files. Instead Yarn locked down your dependencies for easy management. Now that NPM 5 is in use, the only real benefit of Yarn is that it still builds dependencies faster than NPM. When NPM improves speed I'll switch back to it. Until then I'll continue using Yarn.
@@ -174,6 +179,8 @@ For any new React projects I'll typically install the following:
 
  `npm install react react-dom`
  
+Other good packages I use with my projects can be found in this [package.json template](). 
+
 #### Install Prettier and ESLint
 
 Prettier is a style formatter for your project files. To install:
@@ -184,6 +191,15 @@ ESLint is a JavaScript linting tool. To install:
 
     $ npm install --global eslint
 
+Can also install them in your project by adding all the eslint dependencies to package.json.
+
+#### Set up ESLint config file
+
+Create a file in your root directory named .eslintrc.json.
+Fill it with the config code setup from this template.
+Add a bash command "lint" in your NPM scripts file shown below.
+
+You can test this by running the command: `yarn lint`.
 
 #### NPM Scripts
 
@@ -199,36 +215,38 @@ The word on the left can be anything you want but these are standard ones. The c
 To run this on command line for example you could run: `$ npm run build` which will run webpack.
 For special words like "test" and "start" running `npm test` or `npm t` will also work.
 
+#### Create index.html and app.js
+
+Add a index.html and make sure it has at least one div with id="app".
+Add script tag with src="js/bundle.js"
+
+Add app.js file. This will contain your import statements for react and react-dom {render}.
+
 #### Babel
 
 Babel takes es6 (future JavaScript) and compiles it down to es5 (current JavaScript), the version currently supported on the majority of browsers.
 
-Install by first addding the dependencies:
-*The last two packages will allow you use start using es6 and JSX*.
+Install by addding the dev dependencies below:
 
-    $ yarn add babel-loader babel-core babel-preset-es2015 babel-preset-react
-    
-Now create a new file named `.babelrc`.
-Inside write the following JSON.
-    
-    {
-        'presets': [
-            'es2015', 'react'
-        ]
-    }
+    $ yarn add babel-loader babel-core babel-eslint babel-plugin-dynamic-import-node babel-plugin-syntax-dynamic-import babel-plugin-transform-class-properties babel-plugin-transform-es2015-modules-commonjs babel-preset-env babel-preset-react --dev 
 
-If you were still using npm scripts to run webpack you would change the command to the following:
+#### Write config file for Babel
+
+Now create a new file named `.babelrc` in the root directory.
+Copy the [template presets for Babel](). Inside this file you set presets which are groups of plugins. Plugins are the transformation tools.
+
+Note: If you were still using npm scripts to run webpack you would change the command to the following:
 `"build": "webpack --module-bind 'js=babel' js/ClientApp.js public/bundle.js"`
 
 However this is getting long so you should change remove everything after webpack and set up a webpack config file described in the next section.
 
 #### Webpack
 
-Webpack takes all components that you’ve created puts it together in one bundled JavaScript file and makes it available to send down.
-That way you can break huge projects down to smaller more manageable modules. 
+Webpack takes all components that you’ve created puts it together in one bundled JavaScript file and makes it available to send down. That way you can break huge projects down to smaller more manageable modules. 
+
 To install: 
 
-    $ yarn add webpack webpack-dev-server path (or run $ npm install --global webpack)
+    $ yarn add webpack (or run $ npm install --global webpack)
     
 Now you could run a command to convert your React files into your final js file. Make sure you are in your project's root directory. 
 For a Dev build, run:
@@ -239,36 +257,36 @@ In this example the first file webpack is going to see is js/Clientapp.js. The o
 The bundle.js file will be pretty large. That is why you should run a separate build for production. This one should be minified, gzipped.
 For a Produciton build, run: 
 
-    $ NODE_ENV=production webpack -p js/Clientapp.js public/bundle.js 
- 
+    $ webpack -p js/Clientapp.js public/bundle.js 
+
+#### Write config file for Webpack
+
 Now all you need to do is add the file path to your bundle file in your main html file.
 You could add this command to your npm scripts. However it will get even longer once you add Babel.
 Instead of running longer commands like this, you can create a webpack config file to handle it for you.
 
 Create a new *webpack.config.js* file in the project root directory.
-Add the following:
-
-    const path = require('path')
-    module.exports = {
-        entry: 'app.js',
-        output: {
-            path: path.resolve('dist'),
-            filename: 'bundle.js'
-        },
-        module: {
-            loaders: [
-                {test: /\.js$/, loader: 'babel-loader', exclude: /node-modules/}
-            ]
-        }
-    }
-    
+Fill out the config based on the [webpack config template]().
+ 
+EXPLANATION OF CONFIG FILE:
+Context: sets the root directory.
 Entry: is the file where the bundler starts the bundling process.
 Output: is the location where the bundled JS file will be saved.
+Devtool: Uses source maps.
+Resolve: Tells webpack which files to add to bundle and in a particular order.
+Stats: Info configuration.
+Module: Rules for webpack.
 Loaders: are transformations applied on a file in our app. The key property takes on an array of loaders.
 
 Check the [Webpack documentation](https://webpack.github.io/docs/list-of-loaders.html) for more potential loaders you can use.
-With the webpack config file setup all you have to do is run `npm run webpack` when you want to push out a build.
 
+#### Set bash commands for Webpack
+
+Create a bash command "build": "webpack" in npm scripts for webpack. It will know to use the config file settings.
+Test the command by running `yarn build` or `npm run build`.
+
+Now instead of building every time you make a change, set up the watcher bash command to build every time you save your files.
+Add "start": "webpack --watch" to your package.json scripts.
 
 #### LESS
 
