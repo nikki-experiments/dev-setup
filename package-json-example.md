@@ -1,4 +1,4 @@
-#Example for a package.json file
+# Example for a package.json file
 
 ```
 {
