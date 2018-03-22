@@ -179,7 +179,7 @@ For any new React projects I'll typically install the following:
 
  `npm install react react-dom`
  
-Other good packages I use with my projects can be found in this [package.json template](). 
+Other good packages I use with my projects can be found in this [package.json template](https://github.com/nikki-experiments/dev-setup/blob/master/package-json-example.md). 
 
 #### Install Prettier and ESLint
 
