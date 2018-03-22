@@ -1,5 +1,6 @@
 #Example for a package.json file
 
+```
 {
   "scripts": {
     "api": "node ratingsAPI.js",
@@ -72,3 +73,4 @@
   "author": "Brian Holt <btholt@gmail.com>",
   "license": "MIT"
 }
+```
