@@ -169,14 +169,14 @@ Create a new *webpack.config.js* file in the project root directory.
 Fill out the config based on the [webpack config template]().
  
 EXPLANATION OF CONFIG FILE:
-Context: sets the root directory.
-Entry: is the file where the bundler starts the bundling process.
-Output: is the location where the bundled JS file will be saved.
-Devtool: Uses source maps.
-Resolve: Tells webpack which files to add to bundle and in a particular order.
-Stats: Info configuration.
-Module: Rules for webpack.
-Loaders: are transformations applied on a file in our app. The key property takes on an array of loaders.
+- Context: sets the root directory.
+- Entry: is the file where the bundler starts the bundling process.
+- Output: is the location where the bundled JS file will be saved.
+- Devtool: Uses source maps.
+- Resolve: Tells webpack which files to add to bundle and in a particular order.
+- Stats: Info configuration.
+- Module: Rules for webpack.
+- Loaders: are transformations applied on a file in our app. The key property takes on an array of loaders.
 
 Check the [Webpack documentation](https://webpack.github.io/docs/list-of-loaders.html) for more potential loaders you can use.
 
