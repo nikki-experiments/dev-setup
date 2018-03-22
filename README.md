@@ -85,7 +85,7 @@ Add basic git configurations that will be added to your `.gitconfig` file. You c
     $ git config --global user.name "Your Name Here"
     $ git config --global user.email "your_email@youremail.com"
 
-Also create a `.gitignore` file. Look at the example file. (TODO: add example file)
+Also create a `.gitignore` file. Look at this boiler plate [example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitignore.md).
 Here is a fun website that teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
 
 ## Visual Studio Code
