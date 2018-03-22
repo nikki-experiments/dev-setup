@@ -196,7 +196,7 @@ Can also install them in your project by adding all the eslint dependencies to p
 #### Set up ESLint config file
 
 Create a file in your root directory named .eslintrc.json.
-Fill it with the config code setup from this template.
+Fill it with the config code setup from this [example template](https://github.com/nikki-experiments/dev-setup/blob/master/.eslintrc-example.md).
 Add a bash command "lint" in your NPM scripts file shown below.
 
 You can test this by running the command: `yarn lint`.
