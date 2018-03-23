@@ -80,7 +80,7 @@ If not install it:
     
 Check the git version again to see if it installed correctly. Running `$ which git` should output `/usr/bin/git`.
 
-Add basic git configurations that will be added to your `.gitconfig` file. You can also add aliases to your config file similar to the ones I use in the example file. (TODO: add example file)
+Add basic git configurations that will be added to your `.gitconfig` file. You can also add aliases to your config file similar to the ones I use in this [.gitignore example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitconfig.md).
 
     $ git config --global user.name "Your Name Here"
     $ git config --global user.email "your_email@youremail.com"
