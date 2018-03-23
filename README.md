@@ -82,11 +82,14 @@ Check the git version again to see if it installed correctly. Running `$ which g
 
 Add basic git configurations that will be added to your `.gitconfig` file. You can also add aliases to your config file similar to the ones I use in this [.gitignore example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitconfig.md).
 
+You can also add to your global git config by using the following examples:
+
     $ git config --global user.name "Your Name Here"
     $ git config --global user.email "your_email@youremail.com"
 
-Also create a `.gitignore` file. Look at this boiler plate [example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitignore.md).
-Here is a fun website that teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
+It's a good idea to have a `.gitignore` file. Look at this boiler plate [example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitignore.md).
+
+Finally, here is a fun website that teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
 
 ## Visual Studio Code
 
