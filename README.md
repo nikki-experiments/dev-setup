@@ -102,6 +102,7 @@ Some installed Packages I use: Babel ES6/ES7, ESLint, Flow Language Support, Pre
 ### Open Files In VSCode
 
 Set up ability to open files in VSCode from the terminal:
+    
     1. Launch VSCode
     2. Type SHIFT+CMD+P then type 'shell command'.
     3. Select **Shell Command: Install 'code' command in PATH**
