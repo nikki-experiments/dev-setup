@@ -109,8 +109,6 @@ Set up ability to open files in VSCode from the terminal:
 4. Restart terminal for the new PATH value to take effect . 
 
 Open files in VSCode from terminal window.
-
-    Type the following in terminal. This should open the folder your in w/in VSCode.
     
     $ code .
 
