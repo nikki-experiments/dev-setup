@@ -97,7 +97,20 @@ As far as text editors go, I was a hardcore [Sublime Text](https://www.sublimete
 
 I love the embedded terminal, ease of installing packages, and debug features.
 
-Installed Packages: Babel ES6/ES7, ESLint, Flow Language Support, Prettier - Code formatter.
+Some installed Packages I use: Babel ES6/ES7, ESLint, Flow Language Support, Prettier - Code formatter.
+
+### Open Files In VSCode
+
+Set up ability to open files in VSCode from the terminal:
+    1. Launch VSCode
+    2. Type SHIFT+CMD+P then type 'shell command'.
+    3. Select **Shell Command: Install 'code' command in PATH**
+    4. Restart terminal for the new PATH value to take effect.
+    
+Open files in VSCode from terminal window.
+    Type the following in terminal. This should open the folder your in w/in VSCode.
+    
+    $ code .
 
 ## Project Folders
 
