@@ -102,10 +102,10 @@ Some installed Packages I use: Babel ES6/ES7, ESLint, Flow Language Support, Pre
 ### Open Files In VSCode
 
 Set up ability to open files in VSCode from the terminal: 
-    1. Launch VSCode\s\s
-    2. Type SHIFT+CMD+P then type 'shell command'.\s\s
-    3. Select **Shell Command: Install 'code' command in PATH**\s\s
-    4. Restart terminal for the new PATH value to take effect.\s\s
+    1. Launch VSCode \s\s
+    2. Type SHIFT+CMD+P then type 'shell command'. \s\s
+    3. Select **Shell Command: Install 'code' command in PATH** \s\s
+    4. Restart terminal for the new PATH value to take effect. \s\s
     
 Open files in VSCode from terminal window.
     Type the following in terminal. This should open the folder your in w/in VSCode.
