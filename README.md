@@ -53,6 +53,10 @@ I like to change terminal preferences to add color to help see what branch I'm o
 I use Homebrew as a package manager for when I need to install programs on my Mac operating system. The process may change when I update my OS but as of (OS X Yosemite 10.10) you need to install **Command Line Tools** for **Xcode**. 
 Read more about it [here](https://github.com/nikki-experiments/dev-setup/blob/master/homebrew.md).
 
+Install **tree** using Homebrew to help you view directory structures. After installing just type tree to view the directory structure your in.
+
+    $ brew install tree
+
 ## SSH
 
 I use **Secure Shell (SSH)** to connect to remote hosts via the command line. To make it easier to login, create a config file at `~/.ssh/config`.
