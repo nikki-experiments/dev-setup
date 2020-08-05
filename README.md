@@ -45,7 +45,7 @@ Options include: [Firefox](https://www.mozilla.org/en-US/firefox/products/), [Op
 
 ## iTerm2
 
-Download and install [iTerm2](http://www.iterm2.com/) for a better terminal experience.
+When I'm not using the terminal in my code editor I can use iTerm to make changes on my operating system. This is helpful when installing or deleting programs. Download and install [iTerm2](http://www.iterm2.com/) for a better terminal experience.
 I like to change terminal preferences to add color to help see what branch I'm on. Take the code from this [gist](https://gist.github.com/nikkipurcell/2f8c0cc81c008a1a3ef7a35d82de0f4f) and add it to your ~/.bash_profile file.
 
 ## Homebrew
