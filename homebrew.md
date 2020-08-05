@@ -1,5 +1,5 @@
 # Homebrew
-I use this when installing programs to my Mac operating system.
+I use this when installing programs to my Mac operating system. For the lastest info or installation instructions go to [Homebrew website](https://brew.sh/).
 
 ## Install
 I already had Xcode installed on my machine. I just needed to install the Command Line Tools. (Note: Newer OS X versions will no longer require you to download CLT or Xcode for this step).
