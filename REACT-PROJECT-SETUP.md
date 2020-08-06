@@ -38,6 +38,12 @@ Use this [web page](https://davidwalsh.name/nvm) to learn how to easily use nvm.
 NPM comes installed with Node.js. 
 To update npm to the latest version run: `npm install -g npm@latest`
 
+## Install Live Server in VS Code
+
+When using VS Code, you can use Live Server (a lightweight web server) to serve your JavaScript application. Add and install it in your VS Code extensions. Restart VS Code for it to take effect.
+
+To use it, simply right click on your index.html file and choose Open with Live Server in the dropdown. This will open a browser and point to the address where your web application will be served from.
+
 ## Install Yarn Globally
 
 When NPM 4 was the latest, Yarn was a must because it produced a yarn.lock file that NPM didn't. There was no need to use messy shrinkwrap files. Instead Yarn locked down your dependencies for easy management. Now that NPM 5 is in use, the only real benefit of Yarn is that it still builds dependencies faster than NPM. When NPM improves speed I'll switch back to it. Until then I'll continue using Yarn.
