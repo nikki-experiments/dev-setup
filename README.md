@@ -69,7 +69,7 @@ I use **Secure Shell (SSH)** to connect to remote hosts via the command line. To
  
  ### Generate SSH key
  
-Generate an SSH key so you can distribute.
+Generate an SSH key so you can distribute. I originally used the code below but for more step by step instructions, [atlassian has a great tutorial](https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/#SetupanSSHkey-ssh2) on generating public and private SSH keys.
  
     $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    
