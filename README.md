@@ -97,11 +97,9 @@ Finally, here is a fun website that teaches the [basics of how to use git](http:
 
 ## Visual Studio Code
 
-As far as text editors go, I was a hardcore [Sublime Text](https://www.sublimetext.com/) user, then I used [Atom](https://atom.io/) and now I'm loving [Visual Studio Code](http://code.visualstudio.com/).
+[Visual Studio Code](http://code.visualstudio.com/) is the most popular lightweight cross-platform editor.
 
-I love the embedded terminal, ease of installing packages, and debug features.
-
-Some installed Packages I use: Babel ES6/ES7, ESLint, Flow Language Support, Prettier - Code formatter.
+Some extensions I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components. (Others that might be better handled as dependencies in package.json include Prettier & ESLint). 
 
 ### Open Files In VSCode
 
