@@ -99,9 +99,9 @@ Finally, here is a fun website that teaches the [basics of how to use git](http:
 
 [Visual Studio Code](http://code.visualstudio.com/) is the most popular lightweight cross-platform editor.
 
-Some extensions I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components. (Others that might be better handled as dependencies in package.json include Prettier & ESLint). 
+Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components. (Others that might be better handled as dependencies in package.json include Prettier & ESLint). 
 
-Set VS settings in VS Code: Shift + CMD + P.
+Set **VS settings** in VS Code: Shift + CMD + P.
 Then choose Preferences: Open Settings (JSON). 
 Below is my most recent object settings.
 
@@ -133,6 +133,9 @@ Below is my most recent object settings.
     "editor.renameOnType": true
 }
 ```
+
+To change the **VS Color Theme**: Code -> Preferences -> Color Theme
+Choose one of the previously installed or install a new one. Using Ayu Mirage today.
 
 ### Open Files In VSCode
 
