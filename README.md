@@ -156,11 +156,10 @@ I usually put my version controlled projects in `~/Projects`.
 I usually put my non-version controlled experiments in [Codepen.io](https://codepen.io/).
 
 ## Tech Stacks
+The main front-end tech stack I use is **React** to render the UI and **Node.js** to use npm to install and manage 3rd party packages.
+For the backend I've used Express to help build apis. In the future I will have exposure to popular backend tools like GraphQL, Apollo, Python and possibly Rails.
 
-My coding projects mainly have been React JavaScript projects that use the following tools: 
-  **Redux, Webpack, Babel, Prettier, Flow, React-Router, Gulp, Lodash Less, EsLint, Reselect, Redux-Devtools** and **Jest**.
-
-I have used a few different tech stacks.
+Tech stacks I've worked with in the past include:
 - JavaScript applications: **MERN** (MondoDB, Express, React, Node)
 - Wordpress projects hosted on my VPS: **LAMP** (Linux, Apache, MariaDB, PHP)
 - Local PHP development: **MAMP** (Apache, MySQL, PHP)
@@ -173,53 +172,46 @@ Variations to the stack choices above can include:
 
 ## List of Programs
 
-These are some of the programs that I usually install on my new computers.
+These are some of the other programs that I usually install on my new computers.
 
-- Dropbox - free for 2GB good for backup.
-- Google Drive - similar, good for docs (free for 5GB)
 - Lastpass - stores all passwords
 - Evernote - best note taking app with the biggest muscles
-- Google Keep - nice simple note taking that can be accessed offline.
 - Photoshop - for design
-- Gimp - free photoshop alternative
 - Sequel Pro - free GUI for mySQL databases
-- Slack - communication app 
-- Numbers - Apple equiv of Excel
-- Pages - Apple equiv of Word
-- Github - host public and private Git repositories, keep track of revisions and collaborations.
-- Wordpress - Content Management System (CMS) of choice. Unfortunately not very secure. Alternative CMS: Jekyll. Review my [SEO tools file](https://github.com/nikki-experiments/dev-setup/blob/master/seo.md).
+- Postman - program for testing api requests
+- Alfred - tool for searching Mac applications
+- Microsoft Office - Word, Excel, Powerpoint
+- Pulse Secure - used to connect to corporate resources using VPN.
 
 ## List of Tools
 
 These are either some of the tools that I use and others that I'd like to explore:
 
-### Yarn
+- Github - host public and private Git repositories, keep track of revisions and collaborations.
+- Slack - communication app 
+- OneDrive - cloud storage for sharable documentation, photos, other files (Microsoft) - popular across enterprise organizations.
+- Google Drive - cloud storage for documentation, photos, other files (free for 5GB)
+- Dropbox - free for 2GB good for backup.
 
-[Yarn](https://yarnpkg.com/en/) is a great package manager that installs packages for your projects. It's 100% deterministic, installs packages faster and has better caching than npm. Yarn locks down your dependencies by default (as opposed to npm shrinkwrap command which is more difficult to maintain). General rule is use Yarn for individual project installs and npm for library project installs or global installs where you may not want to lock down the dependencies.
+Review my [SEO tools file](https://github.com/nikki-experiments/dev-setup/blob/master/seo.md).
 
-To install it run `brew install yarn`.
 
-To install a project's dependencies go to the project directory and run `yarn` (similar to npm install command). You'll see a list of dependencies being installed. A yarn.lock file will be created that automatically gets updated when you run yarn commands. If it's a new project with no dependencies yet run `yarn init` and answer the series of questions.
-
-To add packages run `yarn add packagename`. 
-A yarn.lock file will be created which locks down the exact dependencies to use on another machine. Don't modify this file.
-
-Cool fact: you can run `yarn upgrade-interactive` to see all the packages for your project for which upgrades are available.
-
-### Other programs include:
+### Helpful tools to explore:
 
 - [Spectacle](https://www.spectacleapp.com/) - move and resize windows free 
-- Primitive - A CSS framework that provides a base stylesheet
-- Gulp - Task runner that provides compiling, minifying, autoprefixing, linting, and more. Use globally (npm used for local projects)
-  Another option is Grunt.
+
+
+### Fullstack technologies to explore:
+
 - Elasticsearch - open source, real-time search and analytics engine (runs on Java)
 - Redis - key-value store similar to NoSQL database. Can be used for session management or caching by web apps
 - Python - review article (http://blog.teamtreehouse.com/what-is-python)
 - Heroku - Platform as a Service (PaaS) - deploy apps online
-- ComodoSSL - Encryption (TLS/SSL) this protocol increases the security of data transmitted thorugh the internet. You must pay but there is a free option called **Let's Encrypt!**
+- ComodoSSL - Encryption (TLS/SSL) this protocol increases the security of data transmitted thorugh the internet. Free option called **Let's Encrypt!**
 - Cloudflare - Content Delivery Network (CDN) that is fast and free to implement. Just point your name servers to Cloudflare's for lower bandwidth usage. Sites should get speed and performance boost!
+- mySQL Workbench - mySQL database management
 - VirtualBox - virtual machine management
 - Vagrant
 - Docker - container management
 - composeEnhancers
-- mySQL Workbench - mySQL database management
+
