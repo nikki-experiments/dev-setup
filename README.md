@@ -101,6 +101,39 @@ Finally, here is a fun website that teaches the [basics of how to use git](http:
 
 Some extensions I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components. (Others that might be better handled as dependencies in package.json include Prettier & ESLint). 
 
+Set VS settings in VS Code: Shift + CMD + P.
+Then choose Preferences: Open Settings (JSON). 
+Below is my most recent object settings.
+
+```
+// place settings here to override default settings
+{
+    "editor.accessibilitySupport": "off",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.out": true,
+        "**/.vscode": true,
+        "**/.tmp": true
+    },
+    "window.zoomLevel": 1,
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "versionlens.suggestions.showOnStartup": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.renameOnType": true
+}
+```
+
 ### Open Files In VSCode
 
 Set up ability to open files in VSCode from the terminal: 
