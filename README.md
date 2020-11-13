@@ -99,6 +99,8 @@ Finally, here is a fun website that teaches the [basics of how to use git](http:
 
 [Visual Studio Code](http://code.visualstudio.com/) is the most popular lightweight cross-platform editor.
 
+### Configuration
+
 Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components. (Others that might be better handled as dependencies in package.json include Prettier & ESLint). 
 
 Set **VS settings** in VS Code: Shift + CMD + P.
@@ -136,6 +138,14 @@ Below is my most recent object settings.
 
 To change the **VS Color Theme**: Code -> Preferences -> Color Theme
 Choose one of the previously installed or install a new one. Using Ayu Mirage today.
+
+### Install Live Server
+
+When using VS Code, you can use Live Server (a lightweight web server) to serve your JavaScript application. Add and install it in your VS Code extensions. Restart VS Code for it to take effect.
+
+To use it, simply right click on your index.html file and choose Open with Live Server in the dropdown. This will open a browser and point to the address where your web application will be served from.
+
+React applications have their own web server setup so you wont need to use Live Server for those projects. 
 
 ### Open Files In VSCode
 
