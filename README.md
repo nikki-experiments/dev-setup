@@ -101,7 +101,10 @@ Finally, here is a fun website that teaches the [basics of how to use git](http:
 
 ### Configuration
 
-Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components. (Others that might be better handled as dependencies in package.json include Prettier & ESLint). 
+Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components, Prettier & ESLint. 
+
+After you install the **Prettier** extention (called Prettier - Code Formatter) open the VScode Settings file and search for 'default formatter'. Then select esbenp.prettier-vscode. Then search for 'format onSave' and make sure it is checked. If your project is not using a specific npm Prettier package then the default VScode extension will be used to format your pages. Otherwise the npm package should take presedence. You can always disable the extension if you get conflicting Prettier rules.
+
 
 Set **VS settings** in VS Code: Shift + CMD + P.
 Then choose Preferences: Open Settings (JSON). 
