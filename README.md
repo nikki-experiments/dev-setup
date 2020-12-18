@@ -142,6 +142,10 @@ Below is my most recent object settings.
 To change the **VS Color Theme**: Code -> Preferences -> Color Theme
 Choose one of the previously installed or install a new one. Using Ayu Mirage today.
 
+### Set Global Code Snippets
+
+You can set up commonly used snippets w/in VScode such as console.log(); so you don't have to type each type. To do this go to VScode -> Preferences -> User Snippets. Choose new global snippets file. Give name common. Then uncomment the console.log example and change prefix to 'cl' and remove the $1 and $2 variables in the code. Save. Test by going to your code and type 'cl' then TAB to autocomplete the console command.
+
 ### Install Live Server
 
 When using VS Code, you can use Live Server (a lightweight web server) to serve your JavaScript application. Add and install it in your VS Code extensions. Restart VS Code for it to take effect.
