@@ -101,7 +101,7 @@ Finally, here is a fun website that teaches the [basics of how to use git](http:
 
 ### Configuration
 
-Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, GitLens, Live Server, Markdown Preview Enhanced, Path Intellisense, Simple React Snippets, Version Lens, vscode-styled-components, Prettier & ESLint. 
+Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, ErrorLens, ESLint, GitLens - Git supercharged, Live Server, Markdown Preview Enhanced, Path Intellisense, Prettier - Code formatter, Simple React Snippets, TODO Highlight, Version Lens, vscode-styled-components. 
 
 After you install the **Prettier** extention (called Prettier - Code Formatter) open the VScode Settings file and search for 'default formatter'. Then select esbenp.prettier-vscode. Then search for 'format onSave' and make sure it is checked. If your project is not using a specific npm Prettier package then the default VScode extension will be used to format your pages. Otherwise the npm package should take presedence. You can always disable the extension if you get conflicting Prettier rules.
 
@@ -113,34 +113,51 @@ Below is my most recent object settings.
 ```
 // place settings here to override default settings
 {
-    "editor.accessibilitySupport": "off",
-    "editor.formatOnSave": true,
-    "editor.insertSpaces": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderWhitespace": "all",
-    "editor.tabSize": 2,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/.out": true,
-        "**/.vscode": true,
-        "**/.tmp": true
-    },
-    "window.zoomLevel": 1,
-    "terminal.integrated.shell.osx": "/bin/bash",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "versionlens.suggestions.showOnStartup": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "editor.renameOnType": true
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.linkedEditing": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.out": true,
+    "**/.vscode": true,
+    "**/.tmp": true
+  },
+  "terminal.integrated.shell.osx": "/bin/bash",
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    {
+      "text": "TODO",
+      "color": "#333",
+      "backgroundColor": "#2ecc71"
+    }
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "versionlens.suggestions.showOnStartup": true,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Ayu One",
+  "workbench.iconTheme": "Monokai Pro Icons"
 }
 ```
 
-To change the **VS Color Theme**: Code -> Preferences -> Color Theme
-Choose one of the previously installed or install a new one. Using Ayu Mirage today.
+**VS Color Theme**: Code -> Preferences -> Color Theme
+Choose one of the previously installed or install a new one. Using Ayu One today after installing Ayu Adaptive.
+
+**VS Icon Theme**: Code -> Preferences -> File Icon Theme
+Choose one of the previously installed or install a new one. Using Monokai Pro Icons today after installing Monokai Pro.
 
 ### Set Global Code Snippets
 
