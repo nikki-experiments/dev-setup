@@ -101,7 +101,9 @@ Finally, here is a fun website that teaches the [basics of how to use git](http:
 
 ### Configuration
 
-Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, ErrorLens, ESLint, GitLens - Git supercharged, Live Server, Markdown Preview Enhanced, Path Intellisense, Prettier - Code formatter, Simple React Snippets, TODO Highlight, Version Lens, vscode-styled-components. 
+Some **VS extensions** I've enabled in VSCode include: Auto Close Tag, Auto Complete Tag, Auto Rename Tag, Emoji, Error Lens, ESLint, GitLens - Git supercharged, Live Server, Markdown Preview Enhanced, Path Intellisense, Prettier - Code formatter, Simple React Snippets, TODO Highlight, Version Lens, vscode-styled-components. 
+
+A few extensions I might not use since I will include them in the project using npm. These include ESLint.
 
 After you install the **Prettier** extention (called Prettier - Code Formatter) open the VScode Settings file and search for 'default formatter'. Then select esbenp.prettier-vscode. Then search for 'format onSave' and make sure it is checked. If your project is not using a specific npm Prettier package then the default VScode extension will be used to format your pages. Otherwise the npm package should take presedence. You can always disable the extension if you get conflicting Prettier rules.
 
@@ -154,7 +156,7 @@ Below is my most recent object settings.
 ```
 
 **VS Color Theme**: Code -> Preferences -> Color Theme
-Choose one of the previously installed or install a new one. Using Ayu One today after installing Ayu Adaptive.
+Choose one of the previously installed or install a new one. Using Ayu Mirage PowerUp, Ayu Adaptive, and Monokai Pro.
 
 **VS Icon Theme**: Code -> Preferences -> File Icon Theme
 Choose one of the previously installed or install a new one. Using Monokai Pro Icons today after installing Monokai Pro.
