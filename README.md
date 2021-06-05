@@ -161,6 +161,9 @@ Choose one of the previously installed or install a new one. Using Ayu Mirage Po
 **VS Icon Theme**: Code -> Preferences -> File Icon Theme
 Choose one of the previously installed or install a new one. Using Monokai Pro Icons today after installing Monokai Pro.
 
+**VS Code Terminal Format**: 
+Use this article to help customize your VS Code Terminal format. I use 1)username 2)space 3)directory 4)space 5)git branch 6)space 7)end character $. (Customize Your VS Code Terminal)[https://medium.com/@charlesdobson/how-to-customize-your-macos-terminal-7cce5823006e]. To set each item to the color that you like use this article: (How to colorize your bash prompt)[https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/].
+
 ### Set Global Code Snippets
 
 You can set up commonly used snippets w/in VScode such as console.log(); so you don't have to type each type. To do this go to VScode -> Preferences -> User Snippets. Choose new global snippets file. Give name common. Then uncomment the console.log example and change prefix to 'cl' and remove the $1 and $2 variables in the code. Save. Test by going to your code and type 'cl' then TAB to autocomplete the console command.
