@@ -77,23 +77,42 @@ Accept the default location to save the key. You will be prompted to type a secu
 
 ## Git
 
-Do your projects a favor by adding version control. [Git](https://git-scm.com/downloads) project repositories can be hosted in Github. Check to see if Git is already installed by running `$ git --version`. 
-If not install it: 
+Do your projects a favor by adding version control. [Git](https://git-scm.com/downloads) project repositories can be hosted in Github. Check to see if Git is already installed by running `$ git --version`.
+
+### Installing Git
+
+To install Git use homebrew:
 
     $ brew install git
-    
+
 Check the git version again to see if it installed correctly. Running `$ which git` should output `/usr/bin/git`.
 
-Add basic git configurations that will be added to your `.gitconfig` file. You can also add aliases to your config file similar to the ones I use in this [.gitignore example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitconfig.md).
+### Configuring Git
 
-You can also add to your global git config by using the following examples:
+After installing Git, you should have a `.gitconfig` file in your home directory (cd ~). This is where you will add all git configurations.
+
+#### Add global configs
+
+Git will need your username and email to be set as a global configuration. Type this in your terminal:
 
     $ git config --global user.name "Your Name Here"
     $ git config --global user.email "your_email@youremail.com"
 
-It's a good idea to have a `.gitignore` file. Look at this boiler plate [example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitignore.md).
+#### Set aliases
 
-Finally, here is a fun website that teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
+ Next you should create aliases (shortcuts) for your git commands to allow you to be more efficient while you develop.
+ Use the [.giticonfig example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitconfig.md) to set these.
+
+    $ cd ~
+    $ vi .gitconfig
+    // Make changes to config file
+    // Save changes in vi :wq!
+
+### Create .gitignore file
+
+It's a good idea to have a `.gitignore` file. Look at this boiler plate [gitignore example file](https://github.com/nikki-experiments/dev-setup/blob/master/example-gitignore.md).
+
+Of course, look up the lastest documentation to know how best to use Git. This website teaches the [basics of how to use git](http://rogerdudler.github.io/git-guide/).
 
 ## Visual Studio Code
 
