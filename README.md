@@ -144,20 +144,30 @@ Below is my most recent object settings.
   "editor.renderControlCharacters": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "explorer.compactFolders": true,
   "files.autoSave": "onFocusChange",
+  "files.defaultLanguage": "javascript",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "html.format.wrapLineLength": 120,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
   "liveServer.settings.donotShowInfoMsg": true,
+  "prettier.requireConfig": true,
   "search.exclude": {
     "**/node_modules": true,
-    "**/bower_components": true,
+    "**/*.code-search": true,
     "**/.out": true,
     "**/.vscode": true,
-    "**/.tmp": true
+    "**/.tmp": true,
+    "**/.DS_Store": true,
+    "**/.git": true
   },
-  "terminal.integrated.shell.osx": "/bin/bash",
+  "terminal.integrated.fontFamily": "Menlo",
   "todohighlight.isCaseSensitive": true,
   "todohighlight.keywords": [
     {
@@ -174,6 +184,13 @@ Below is my most recent object settings.
 }
 ```
 
+Some optional settings include:
+- files.exclude: {"doubleAsterix/.git": true,} ~ add file types to exclude from finder (.hg, tmp, cache, CVS, .DS_Store, Thumbs.db).
+- "git.suggestSmartCommit": true, ~ (old job set this to false, my tutorial set it to true. check w/organization).
+- Specific settings above support extensions listed here: (Emmet, LiveServer, Prettier, TypeScript, TODO highlight).
+- Can include settings for ESLint or TSLint. Such as: "files.associations": {".eslintrc": "jsonc"}
+
+  
 **VS Color Theme**: Code -> Preferences -> Color Theme
 Choose one of the previously installed or install a new one. Using Ayu Mirage PowerUp, Ayu Adaptive, and Monokai Pro.
 
