@@ -59,21 +59,31 @@ Install **tree** using Homebrew to help you view directory structures. After ins
 
 ## SSH
 
-I use **Secure Shell (SSH)** to connect to remote hosts via the command line. To make it easier to login, create a config file at `~/.ssh/config`.
+I use **Secure Shell (SSH)** to connect to remote hosts like Github repos via the command line. Use the following instructions if you need to set up new keys to connect to your remote repo.
 
-    Host example,
-        Hostname example.com
-        User user.name
+### Generate SSH key
  
- This creates an alias for `user.name@example.com`. To run the alias type `ssh example` in terminal.
+Follow these [Github instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate an SSH public and private key pair for your computer if you have not done so already.
  
- ### Generate SSH key
- 
-Generate an SSH key so you can distribute. I originally used the code below but for more step by step instructions, [atlassian has a great tutorial](https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/#SetupanSSHkey-ssh2) on generating public and private SSH keys.
- 
-    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    $ ssh-keygen -t ed25519 -b 4096 -C "your_email@example.com"
    
 Accept the default location to save the key. You will be prompted to type a secure passphrase. Good idea for safety.
+
+### Add SSH key to ssh-agent 
+
+Follow the instructions above to create a config file at `~/.ssh/config`. Add the following:
+
+    Host github.com,
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ~/.ssh/id_ed25519
+  
+
+Add your private key to the ssh-agent and store your passphrase to the keychain: 
+
+    ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
+Add the SSH public key to your account on GitHub or other remote repository website.
 
 ## Git
 
